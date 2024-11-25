@@ -1,0 +1,135 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main Container */
+#app {
+    width: 90%;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Task List */
+#tasks {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    margin: 10px 0;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.task-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.task-priority {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.high-priority {
+    color: #e63946;
+}
+
+.medium-priority {
+    color: #ffb703;
+}
+
+.low-priority {
+    color: #52b788;
+}
+
+/* Buttons */
+button {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.add-task-btn {
+    background-color: #0077b6;
+    color: white;
+    margin-top: 10px;
+}
+
+.edit-btn {
+    background-color: #ffb703;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #e63946;
+    color: white;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+.login-btn{
+    background-color: #0077b6;
+    color: white;
+    margin:10px 0;
+}
+
+.submit-btn {
+    background-color: #0077b6;
+    color: white;
+}
