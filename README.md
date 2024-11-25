@@ -87,3 +87,9 @@ Capstone-project/
 | `POST`     | `/api/tasks`          | Create a new task           |
 | `PUT`      | `/api/tasks/:id`      | Update a task by ID         |
 | `DELETE`   | `/api/tasks/:id`      | Delete a task by ID         |
+
+## 🖼️ Screenshots
+
+![TaskMaster Screenshot 1](frontend/website-image.png)
+![TaskMaster Screenshot 2](frontend/website-image2.png)
+![TaskMaster Screenshot 3](frontend/website-image3.png)
