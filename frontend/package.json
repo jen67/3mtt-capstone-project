@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "build": "webpack --mode production",
-    "start": "node ../server.js"
+    
   },
   "keywords": [],
   "author": "",
