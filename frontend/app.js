@@ -1,3 +1,6 @@
+const API_URL = "https://threemtt-capstone-project-u9lv.onrender.com";
+
+
 document.addEventListener("DOMContentLoaded", async () => {
   const token = localStorage.getItem("token");
 
@@ -26,7 +29,7 @@ async function fetchAndDisplayTasks() {
   const token = localStorage.getItem("token");
 
   try {
-    const res = await fetch("/api/tasks", {
+    const res = await fetch(`${API_URL}/api/tasks`, {
       headers: { Authorization: `Bearer ${token}` },
     });
 
@@ -125,7 +128,7 @@ async function markTaskAsComplete(taskId, isCompleted) {
   const token = localStorage.getItem("token");
 
   try {
-    const res = await fetch(`/api/tasks/${taskId}/complete`, {
+    const res = await fetch(`${API_URL}/api/tasks/${taskId}/complete`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -178,7 +181,7 @@ async function addTask(title, description, deadline, priority) {
   }
 
   try {
-    const res = await fetch("/api/tasks", {
+    const res = await fetch(`${API_URL}/api/tasks`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -226,7 +229,7 @@ document.getElementById("logout-btn")?.addEventListener("click", () => {
 // Sign-up logic
 async function signUp(username, password) {
   try {
-    const res = await fetch("/api/users/register", {
+    const res = await fetch(`${API_URL}/api/users/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -270,7 +273,7 @@ if (window.location.pathname === "/register.html") {
 // Login logic
 async function login(username, password) {
   try {
-    const res = await fetch("/api/users/login", {
+    const res = await fetch(`${API_URL}/api/users/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -348,7 +351,7 @@ async function deleteTask(taskId) {
   const token = localStorage.getItem("token");
 
   try {
-    const res = await fetch(`/api/tasks/${taskId}`, {
+    const res = await fetch(`${API_URL}/api/tasks/${taskId}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -411,7 +414,7 @@ async function fetchTaskDetails(taskId) {
   const token = localStorage.getItem("token");
 
   try {
-    const res = await fetch(`/api/tasks/${taskId}`, {
+    const res = await fetch(`${API_URL}/api/tasks/${taskId}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -446,7 +449,7 @@ async function updateTask(taskId, title, description, deadline, priority) {
   }
 
   try {
-    const res = await fetch(`/api/tasks/${taskId}`, {
+    const res = await fetch(`${API_URL}/api/tasks/${taskId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
